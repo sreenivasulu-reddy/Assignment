@@ -1,0 +1,316 @@
+Question1
+import java.util.function.BiFunction;
+import java.util.function.BinaryOperator;
+
+public class HelloCalculatorUsingBiFunction {
+
+	public Long process( long num1, long num2, BiFunction biFunc ) {
+		return (Long) biFunc.apply( num1, num2);
+	}
+
+	public static void main(String[] args) {		
+		HelloCalculatorUsingBiFunction hlbf = new HelloCalculatorUsingBiFunction();
+
+		BinaryOperator add = (x, y) -> x + y;		
+		System.out.println( "Addition: " + hlbf.process( 4, 5, add ));
+
+		BinaryOperator subtract = (x, y) -> x - y;		
+		System.out.println( "Subtraction: " + hlbf.process( 4, 5, subtract ));
+
+		BinaryOperator multiply = (x, y) -> x/y;		
+		System.out.println( "Multiplication: " + hlbf.process( 4, 5, multiply ));
+
+		BinaryOperator division = (x, y) -> x/y;		
+		System.out.println( "Division: " + hlbf.process( 4, 5, division ));
+	}
+
+}
+Question2
+
+class Rectangle
+{
+int width;
+int height;
+public void display()
+{
+system.out.println(width+" "+height);
+}
+}
+class Rectangle area
+{
+public void read_input(int w,int h)
+{
+width=w;
+height=h;
+}
+int area=width*height;
+public void display()
+{
+system.out.println(area);
+}
+}
+class main
+{
+public static void main(String[] args) {	
+Scanner sc=new scanner(system.in);
+int w=sc.nextInt();
+int h=sc.nextInt();
+Rectangle Area obj=new Rectangle Area ();
+obj.read input(w,h);
+obj.dis();
+}
+}
+Question 3
+
+import java.util.Scanner;
+ 
+public class Employee {
+ 
+ int empid;
+ String name;
+ String location;
+ float salary;
+ 
+ public void getInput() {
+ 
+  Scanner in = new Scanner(System.in);
+  System.out.print("Enter the empid :: ");
+  empid = in.nextInt();
+  System.out.print("Enter the name :: ");
+  name = in.next();
+  System.out.print("Enter the location :: ");
+ location= in.next();
+  System.out.print("Enter the salary :: ");
+  salary = in.nextFloat();
+ }
+ 
+ public void display() {
+  
+  System.out.println("Employee id = " + empid);
+  System.out.println("Employee name = " + name);
+  System.out.println("Employee salary = " + salary);
+System.out.println("Employee location = " + location);
+ }
+ 
+ public static void main(String[] args) {
+ 
+  Employee e[] = new Employee[10];
+  
+  for(int i=0; i<10; i++) {
+   
+   e[i] = new Employee();
+   e[i].getInput();
+  }
+  
+  System.out.println("**** Data Entered as below ****");
+  
+  for(int i=0; i<10; i++) {
+   
+   e[i].display();
+  }
+ }
+}
+
+Question 4
+public class Circle { 
+ public static final double DEFAULT_RADIUS = 8.8;
+ public static final String DEFAULT_COLOR = "red";
+ private double radius;
+ private String color;
+public Circle() { 
+ radius = DEFAULT_RADIUS;
+ color = DEFAULT_COLOR;
+ }
+ public Circle(double radius) { 
+ this.radius = radius;
+ color = DEFAULT_COLOR;
+ }
+ public Circle(double radius, String color) { 
+ this.radius = radius;
+ this.color = color;
+ }
+ public double getRadius() {
+ return radius;
+ }
+ public void setRadius(double radius) {
+ this.radius = radius;
+ }
+ public String getColor() {
+ return color;
+ }
+ public void setColor(String color) {
+ this.color = color;
+ }
+ public String toString() {
+ return "Circle with radius = " + radius + " and color of " + color;
+ }
+ public double getArea() {
+ return radius*radius*Math.PI;
+ }
+}
+Question 5
+import java.util.Scanner;
+public class Main { 
+public static void main(String[] args) {
+ComplexNumber c1 = new ComplexNumber();
+ ComplexNumber c2 = new ComplexNumber();
+ComplexNumber sum = c1.sum(c2); 
+ComplexNumber difference = c1.difference(c2);
+ComplexNumber product = c1.product(c2);
+SYstem.out.println("first complex number: " + c1); 
+System.out.println("second complex number: " + c2);
+ System.out.println("sum of two complex numbers: " + sum); 
+System.out.println("difference of two complex numbers: " + difference);
+System.out.println("product of two complex numbers: " + product);
+}
+}
+class ComplexNumber { 
+private final double real;
+private final double imaginary;
+public ComplexNumber(double real, double imaginary) { 
+this.real = real; 
+this.imaginary = imaginary;
+ }
+public ComplexNumber sum(ComplexNumber other) { 
+double r = this.real + other.real; 
+double i = this.imaginary + other.imaginary; 
+return new ComplexNumber(r, i);
+ }
+public ComplexNumber difference(ComplexNumber other) { 
+double r = this.real - other.real; 
+double i = this.imaginary - other.imaginary;
+ return new ComplexNumber(r, i);
+ }
+public ComplexNumber product(ComplexNumber other) { 
+double r = this.real - other.real; 
+double i = this.imaginary - other.imaginary;
+ return new ComplexNumber(r, i);
+ }
+public double getReal() { 
+return real;
+ } 
+public double getImaginary() { 
+return imaginary;
+ }
+public String toString()
+ {
+ return real + " + " + imaginary + "i";
+}
+}
+Question 6
+
+class Employee
+    {
+        public string name;
+        public int salary;
+        public int joiningDate;
+
+        public Employee()
+        {
+
+        }
+
+        public Employee(string name, int salary, int  year of joining)
+        {
+            this.name = name;
+            this.salary = salary;
+            this.year of joining =year of joining;
+        }
+
+        public void GetEmployeeData()
+        {
+            {
+                Console.WriteLine("Enter the name of employee: ");
+                name = Convert.ToString(Console.ReadLine());
+                Console.WriteLine("Enter the salary of employee: ");
+                salary = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Enter the year of joining of employee: ");
+                 year of joining= Convert.ToInt32(Console.ReadLine());
+            }
+        }
+
+        public void DisplayEmployee()
+        {
+            Console.WriteLine("The name of employee is: "+ name);
+            Console.WriteLine("The salary of employee is: "+salary);
+            Console.WriteLine("The date of joining of employee is: "+ year of joining);
+        }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Employee[] e = new Employee[3];
+            for(int i = 0; i < 3; i++)
+            {
+                 Console.WriteLine($"Enter the data of employee with id: {i} *****************************************");
+                e[i] = new Employee();
+                e[i].GetEmployeeData();
+            }
+
+            Console.WriteLine("***********The data of given employees is: ");
+
+            for(int i = 0; i < 3; i++)
+            {
+                e[i].DisplayEmployee();
+            }
+        }
+    }
+
+Question 7
+import java.util.*;
+public class Solution {
+ public static void main(String[] args) {
+  Scanner in = new Scanner(System.in);
+  System.out.print("Input side1: ");
+  int s1 = in .nextInt();
+  System.out.print("Input side2: ");
+  int s2 = in .nextInt();
+  System.out.print("Input side3: ");
+  int s3 = in .nextInt();
+
+  System.out.print("Is the said sides form a triangle: " + isValidTriangle(s1, s2, s3));
+ }
+ public static boolean isValidTriangle(int a, int b, int c) {
+  return (a + b > c && b + c > a && c + a > b);
+ }
+}
+
+
+Question 8
+public class MyGenericArrayList {
+   private int size;     
+   private Object[] elements;
+   
+   public MyGenericArrayList() {  
+      elements = new Object[10];  
+      size = 0;
+   }
+   public void add(Object e) {
+      if (size < elements.length) {
+         elements[size] = e;
+      } else {
+         Object[] newElements = new Object[size + 10];
+         for (int i = 0; i < size; ++i) newElements[i] = elements[i];
+         elements = newElements;
+      }
+      ++size;
+   }
+   public Object get(int index) {
+      if (index >= size)
+         throw new IndexOutOfBoundsException("Index: " + index + ", Size: " + size);
+      return (Object)elements[index];
+   }
+   
+   public int size() {
+      return size; 
+   }
+}
+
+
+
+
+
+
+
+
